@@ -631,7 +631,7 @@ filename=${filename%.*}
 mv "$filename" nkn-commercial
 
 chown -R "$username":"$username" /home/"$username"
-chmod -R 755 /home/"$username"
+chmod -R 777 /home/"$username"
 
 /home/"$username"/nkn-commercial/nkn-commercial -b "$benaddress" -d /home/"$username"/nkn-commercial/ -u "$username" install > /dev/null 2>&1
 printf "DONE!\n"
@@ -696,7 +696,7 @@ else
 fi
 
 chown -R "$username":"$username" /home/"$username" > /dev/null 2>&1
-chmod -R 755 /home/"$username" > /dev/null 2>&1
+chmod -R 777 /home/"$username" > /dev/null 2>&1
 
 printf "Downloading / Extracting NKN Chain database............................. DONE!\n"
 install3
